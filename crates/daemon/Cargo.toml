@@ -1,0 +1,21 @@
+[package]
+name = "pluscreentimed"
+description = "PluScreenTime daemon: follows the focused window and keeps the history of screen time"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+pluscreentime-protocol.workspace = true
+anyhow.workspace = true
+libc.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+tokio = { workspace = true, features = ["rt", "net", "time", "macros", "sync", "signal", "io-util"] }
+toml.workspace = true
+tracing.workspace = true
+tracing-subscriber = { workspace = true, features = ["env-filter"] }
+rusqlite = { version = "0.43.0", features = ["bundled"] }
+wayland-client = "0.31.15"
+wayland-protocols = { version = "0.32.13", features = ["client", "staging"] }
+zbus = { version = "5", default-features = false, features = ["tokio"] }

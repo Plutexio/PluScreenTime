@@ -1,0 +1,21 @@
+[package]
+name = "pluscreentime"
+description = "PluScreenTime: how long you spent at the screen, and in which apps"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+pluscreentime-protocol.workspace = true
+anyhow.workspace = true
+cxx = "1"
+cxx-qt = "0.10.0"
+cxx-qt-lib = { version = "0.10.0", features = ["full"] }
+material-colors = "0.5.0"
+serde.workspace = true
+serde_json.workspace = true
+toml.workspace = true
+
+[build-dependencies]
+cxx-qt-build = "0.10.0"
+qt-build-utils = "0.10.0"

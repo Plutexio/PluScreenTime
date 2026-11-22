@@ -1,0 +1,16 @@
+[Unit]
+Description=PluScreenTime daemon: keeps the history of screen time
+
+[Service]
+# Extra options:
+#   systemctl --user edit pluscreentimed
+#   [Service]
+#   Environment="PLUSCREENTIMED_ARGS=--database /somewhere/else.db"
+Environment=PLUSCREENTIMED_ARGS=
+ExecStart=@BINDIR@/pluscreentimed $PLUSCREENTIMED_ARGS
+Restart=on-failure
+RestartSec=3
+Nice=5
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=PluScreenTime
+GenericName=Screen Time
+Comment=How long you spent at the screen, and in which apps
+Exec=@BINDIR@/pluscreentime
+Icon=pluscreentime
+Terminal=false
+Categories=Utility;Qt;
+Keywords=screen;time;usage;apps;wellbeing;statistics;
+StartupNotify=true
+StartupWMClass=pluscreentime
